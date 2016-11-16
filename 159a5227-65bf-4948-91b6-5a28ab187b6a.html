@@ -1,0 +1,16 @@
+<style>#Line {
+  background-image : url("{{settings.img}}");
+  background-repeat: no-repeat;
+  background-size: {{settings.width}}px {{settings.height}}px;
+  
+}</style>
+<div><svg id="Line" width="{{settings.width}}px" height="{{settings.height}}px">
+	<g ng-repeat="row in data.rows" ng-show="({{row.cells[0].qText}} == {{row.cells[2].qText}}) && ({{row.cells[1].qText}} == {{row.cells[3].qText}})">
+  		<circle cx="{{row.cells[0].qText}}" cy="{{row.cells[1].qText}}" r="{{row.cells[2].qText}}" fill="{{settings.color}}" fill-opacity="0.4"></circle>
+		<text x="{{row.cells[0].qText}}" y="{{row.cells[1].qText}}" font-family="Verdana" font-size="10" fill="blue">{{row.cells[4].qText}}</text>
+  	</g>
+	<g ng-repeat="row in data.rows" ng-show="!(({{row.cells[0].qText}} == {{row.cells[2].qText}}) && ({{row.cells[1].qText}} == {{row.cells[3].qText}}))">
+  		<line x1="{{row.cells[0].qText}}" y1="{{row.cells[1].qText}}" x2="{{row.cells[2].qText}}" y2="{{row.cells[3].qText}}" stroke="{{settings.color}}" stroke-width="{{row.cells[4].qText}}"></line>	 
+  	</g>
+</svg>
+</div>

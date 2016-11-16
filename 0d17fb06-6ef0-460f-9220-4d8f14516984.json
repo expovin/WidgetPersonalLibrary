@@ -1,0 +1,93 @@
+{
+  "name": "MigrationPath",
+  "description": "Path di migrazione",
+  "author": "",
+  "library": "ves",
+  "meta": {
+    "type": "chart"
+  },
+  "properties": {
+    "measures": {
+      "min": 1,
+      "max": 1
+    },
+    "dimensions": {
+      "max": 4,
+      "min": 2
+    },
+    "sections": [
+      {
+        "type": "header",
+        "order": 0,
+        "parent": "qw-pe-dropzone1-0",
+        "ref": "header1",
+        "label": "Settings"
+      }
+    ],
+    "settings": [
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "",
+        "order": 0,
+        "parent": "header1",
+        "ref": "img",
+        "label": "Img Path"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "100",
+        "order": 1,
+        "parent": "header1",
+        "ref": "width",
+        "label": "width"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "100",
+        "order": 2,
+        "parent": "header1",
+        "ref": "height",
+        "label": "height"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "#044B94",
+        "order": 3,
+        "parent": "header1",
+        "ref": "color",
+        "label": "Fill Color"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "0.4",
+        "order": 4,
+        "parent": "header1",
+        "ref": "Opacity",
+        "label": "Opacity"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "20",
+        "order": 5,
+        "parent": "header1",
+        "ref": "radius",
+        "label": "Max Radius"
+      },
+      {
+        "type": "boolean",
+        "expression": "optional",
+        "defaultValue": true,
+        "order": 6,
+        "parent": "header1",
+        "ref": "showValues",
+        "label": "Mostra Valori"
+      }
+    ]
+  }
+}

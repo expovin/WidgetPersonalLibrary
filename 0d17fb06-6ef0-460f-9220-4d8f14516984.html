@@ -1,0 +1,15 @@
+<style>#Line {
+  background-image : url("{{settings.img}}");
+  background-repeat: no-repeat;
+  background-size: {{settings.width}}px {{settings.height}}px;
+  
+}
+</style>
+<div><svg id="Line" width="{{settings.width}}"px height="{{settings.height}}"px>
+
+  <g ng-repeat="row in data.rows" ng-hide="{{row.cells[0].qText-50}} == 0">
+	  <rect x="{{row.cells[0].qText-25}}" y="{{row.cells[1].qText-25}}" width="50" height="50" fill="{{settings.color+row.cells[2].qText}}" fill-opacity="{{settings.Opacity}}">
+	  </rect>
+	  <text ng-show="{{settings.showValues}} == true" x="{{row.cells[0].qText-10}}" y="{{row.cells[1].qText}}" font-family="Verdana" font-size="10" fill="blue"> {{row.cells[2].qText}} </text>
+  </g>
+</svg></div>

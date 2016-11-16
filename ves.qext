@@ -1,0 +1,10 @@
+{
+  "name": "ves",
+  "description": "My personal library",
+  "type": "widget-library",
+  "widgets": [
+    "0d17fb06-6ef0-460f-9220-4d8f14516984",
+    "35e4e180-37a9-40ba-af13-b00ba7a868f3",
+    "159a5227-65bf-4948-91b6-5a28ab187b6a"
+  ]
+}
